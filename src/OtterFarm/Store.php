@@ -32,6 +32,8 @@ class Store{
     curl_setopt($ch, CURLOPT_POSTFIELDS, 
           http_build_query( $post_var ));
     
+    curl_setopt($ch,CURLOPT_SSL_VERIFYPEER, false);
+
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
     $server_output = curl_exec($ch);
 
@@ -40,7 +42,12 @@ class Store{
     }
 
     curl_close ($ch);
-    return $server_output;
+    $response = array();
+    parse_str($server_output, $response);
+    return $response;
   }
 
+  function getPaypalRedirectUrl($token){
+    return "https://www.sandbox.paypal.com/cgi-bin/webscr?cmd=_express-checkout&token=".$token;
+  }
 }

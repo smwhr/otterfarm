@@ -9,4 +9,4 @@ $amount = $qty*$price;
 $s = new OtterFarm\Store;
 $response = $s->requestPayment($amount);
 
-echo $response;
+var_dump( $response );
