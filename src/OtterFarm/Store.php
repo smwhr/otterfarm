@@ -66,7 +66,7 @@ class Store{
     return "https://www.sandbox.paypal.com/cgi-bin/webscr?cmd=_express-checkout&token=".$token;
   }
 
-  function getPayment($payerID){
+  function getPayment($tokenID, $payerID){
       /*
       USER=<callerID>
       &PWD=<callerPswd>
