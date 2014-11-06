@@ -1,0 +1,21 @@
+{
+    "name": "supinternet/otterfarm",
+    "description": "Unittest framework usage",
+    "require": {
+        "php": ">=5.4.0"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Anne Onyme",
+            "email": "supinternet@smwhr.net"
+        }
+    ],
+    "minimum-stability": "stable",
+    "autoload": {
+        "psr-0": {
+            "OtterFarm": "src/",
+            "OtterFarm\\Tests": "src/",
+        }
+    }
+}
