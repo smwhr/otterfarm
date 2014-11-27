@@ -2,7 +2,8 @@
     "name": "supinternet/otterfarm",
     "description": "Unittest framework usage",
     "require": {
-        "php": ">=5.4.0"
+        "php": ">=5.4.0",
+        "oauth-php/oauth-php": "*"
     },
     "license": "MIT",
     "authors": [
@@ -17,5 +18,23 @@
             "OtterFarm": "src/",
             "OtterFarm\\Tests": "src/"
         }
-    }
+        
+    },
+    "repositories": [
+        {
+            "type": "package",
+            "package": {
+                "name": "oauth-php/oauth-php",
+                "version": "157",
+                "source": {
+                    "url": "http://oauth-php.googlecode.com/svn/",
+                    "type": "svn",
+                    "reference": "trunk/"
+                },
+                "autoload": {
+                    "classmap": ["library/"]
+                }
+            }
+        }
+    ]
 }
