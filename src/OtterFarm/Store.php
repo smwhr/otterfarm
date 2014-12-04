@@ -68,16 +68,16 @@ class Store{
 
   function getPayment($tokenID, $payerID){
       /*
-      USER=<callerID>
+       USER=<callerID>
       &PWD=<callerPswd>
       &SIGNATURE=<callerSig>
-      &METHOD=DoExpressCheckoutPayment
+      &METHOD=GetExpressCheckoutDetails
       &VERSION=93
-      &TOKEN=<tokenValue>
-      &PAYERID=<payerID>                      # customer's unique PayPal ID
-      &PAYMENTREQUEST_0_PAYMENTACTION=SALE    # payment type
-      &PAYMENTREQUEST_0_AMT=19.95             # transaction amount
-      &PAYMENTREQUEST_0_CURRENCYCODE=USD"     # transaction currency, e.g. US dollars
+      &TOKEN=<tokenValue>"
+
+      >>>
+       TOKEN=EC%2d4RX1920730957200V
+      &PAYERID=6B9DKHQRKW4SG
       */
 
       /*
@@ -90,15 +90,15 @@ class Store{
   function capturePayment($payerID){
     /*
     USER=<callerID>
-  &PWD=<callerPswd>
-  &SIGNATURE=<callerSig>
-  &METHOD=DoExpressCheckoutPayment
-  &VERSION=93
-  &TOKEN=<tokenValue>
-  &PAYERID=<payerID>                      # customer's unique PayPal ID
-  &PAYMENTREQUEST_0_PAYMENTACTION=SALE    # payment type
-  &PAYMENTREQUEST_0_AMT=19.95             # transaction amount
-  &PAYMENTREQUEST_0_CURRENCYCODE=USD"     # transaction currency, e.g. US dollars
+    &PWD=<callerPswd>
+    &SIGNATURE=<callerSig>
+    &METHOD=DoExpressCheckoutPayment
+    &VERSION=93
+    &TOKEN=<tokenValue>
+    &PAYERID=<payerID>                      # customer's unique PayPal ID
+    &PAYMENTREQUEST_0_PAYMENTACTION=SALE    # payment type
+    &PAYMENTREQUEST_0_AMT=19.95             # transaction amount
+    &PAYMENTREQUEST_0_CURRENCYCODE=USD"     # transaction currency, e.g. US dollars
   */
 
   /*
