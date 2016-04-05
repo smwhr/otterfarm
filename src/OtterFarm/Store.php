@@ -24,7 +24,7 @@ class Store{
             "PWD" =>  $this->password,
             "SIGNATURE" => $this->signature,
             "VERSION" => 78,
-            "AMT" => $amount,
+            "AMT" => 123.00,
             "returnUrl" => "http://myotterfarm.com",
             "cancelUrl"  => "http://myotterfarm.com"
             );
@@ -69,16 +69,11 @@ class Store{
       &PWD=<callerPswd>
       &SIGNATURE=<callerSig>
       &METHOD=GetExpressCheckoutDetails
-      &VERSION=93
+      &VERSION=78
       &TOKEN=<tokenValue>"
 
       >>>
        TOKEN=EC%2d4RX1920730957200V
-      &PAYERID=6B9DKHQRKW4SG
-      */
-
-      /*
-      TOKEN=EC%2d4RX1920730957200V
       &PAYERID=6B9DKHQRKW4SG
       */
   }
@@ -90,12 +85,12 @@ class Store{
     &PWD=<callerPswd>
     &SIGNATURE=<callerSig>
     &METHOD=DoExpressCheckoutPayment
-    &VERSION=93
+    &VERSION=78
     &TOKEN=<tokenValue>
     &PAYERID=<payerID>                      # customer's unique PayPal ID
     &PAYMENTREQUEST_0_PAYMENTACTION=SALE    # payment type
-    &PAYMENTREQUEST_0_AMT=19.95             # transaction amount
-    &PAYMENTREQUEST_0_CURRENCYCODE=USD"     # transaction currency, e.g. US dollars
+    &PAYMENTREQUEST_0_AMT=123.00             # transaction amount
+    &PAYMENTREQUEST_0_CURRENCYCODE=EUR"     # transaction currency, e.g. US dollars
   */
 
   /*
