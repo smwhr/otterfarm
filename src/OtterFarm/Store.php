@@ -45,9 +45,6 @@ class Store{
           http_build_query( $post_var ));
     
     curl_setopt($ch,CURLOPT_SSL_VERIFYPEER, false);
-    
-    curl_setopt($ch, CURLOPT_SSLVERSION, 3);
-    curl_setopt($ch, CURLOPT_SSL_CIPHER_LIST, 'SSLv3');
 
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
     $server_output = curl_exec($ch);
